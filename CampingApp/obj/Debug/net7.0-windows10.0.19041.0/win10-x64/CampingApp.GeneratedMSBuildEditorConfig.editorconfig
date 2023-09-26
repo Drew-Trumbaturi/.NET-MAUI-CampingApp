@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net7.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CampingApp
+build_property.ProjectDir = C:\Users\drewt\source\repos\CampingApp\CampingApp\
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Pages/CompassPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Pages.CompassPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\CompassPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\CompassPage.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Pages/EmptyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Pages.EmptyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\EmptyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\EmptyPage.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Pages/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Pages.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\HomePage.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Pages/PdfPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Pages.PdfPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PdfPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PdfPage.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Pages/StepCounterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Pages.StepCounterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\StepCounterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\StepCounterPage.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Pages/WeatherMapRadar.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Pages.WeatherMapRadar.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\WeatherMapRadar.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\WeatherMapRadar.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Views/CompassView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Views.CompassView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CompassView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CompassView.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Views/CurrentTempView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Views.CurrentTempView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CurrentTempView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CurrentTempView.xaml
+
+[C:/Users/drewt/source/repos/CampingApp/CampingApp/Views/StepCounterView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CampingApp.Views.StepCounterView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\StepCounterView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\StepCounterView.xaml

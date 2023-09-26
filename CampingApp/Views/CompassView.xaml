@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<VerticalStackLayout xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:c="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
+                     x:Class="CampingApp.Views.CompassView"
+                     Loaded="VerticalStackLayout_Loaded"
+                     >
+
+    <Grid>
+        <Image x:Name="CompassDial"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               WidthRequest="200"
+               HeightRequest="200"
+               Source="my_compass.png" />
+        <Image
+            Source="my_compass_needle.png"
+            WidthRequest="190"
+            HeightRequest="160"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            />
+
+    </Grid>
+
+    <Label
+        Text="Direction"
+        HorizontalOptions="Center"
+        class="SubContent"/>
+    <!-- Degree symbol "ALT + 0176 -->
+    <Label x:Name="CompassLabel"
+           Text="180° W"
+           HorizontalOptions="Center"
+           class="Title" />
+
+    <BoxView Margin="10, 0, 0, 0" class="HRule"/>
+
+    <VerticalStackLayout Padding="5" Spacing="2">
+        <Label x:Name="LatText" class="SubContent" HorizontalOptions="Center" Text="Lat: " />
+        <Label x:Name="LonText" class="SubContent" HorizontalOptions="Center" Text="Lon: " />
+        <Label x:Name="AltText" class="SubContent" HorizontalOptions="Center" Text="Alt: "/>
+        <Label x:Name="PresText" class="SubContent" HorizontalOptions="Center" Text=""/>
+    </VerticalStackLayout>
+</VerticalStackLayout>

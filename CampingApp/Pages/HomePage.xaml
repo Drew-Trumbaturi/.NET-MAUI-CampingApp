@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view="clr-namespace:CampingApp.Views"
+             x:Class="CampingApp.Pages.HomePage"
+             Title="Home">
+
+
+    <Grid ColumnDefinitions="{OnIdiom Phone='*', Default='*,500'}"
+          RowDefinitions="*">
+
+        <!-- Main Content -->
+        <ScrollView Grid.Column="0">
+            <VerticalStackLayout
+                Padding="{OnIdiom Phone='0,50',Default='0,50'}"
+                Spacing="{OnIdiom Phone=25,Default=50}">
+
+                <!-- Top Widgets -->
+                <FlexLayout
+                    IsVisible="{OnIdiom Phone=True, Default=False}"
+                    MinimumHeightRequest="360"
+                    AlignItems="Center"
+                    AlignContent="Center"
+                    JustifyContent="SpaceEvenly">
+
+                    <VerticalStackLayout>
+                        <Button Text="View pdf" Clicked="Button_Clicked" />
+
+                        <!--<view:StepCounterView/>-->
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image x:Name="FlashlightImage" IsEnabled="True" Source="flashlight_on.png" WidthRequest="150" HeightRequest="150">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label HorizontalOptions="Center" Text="Flashlight"/>
+                        <Switch x:Name="FlashlightSwitch" Toggled="FlashlightSwitch_Toggled" IsVisible="False"/>
+                    </VerticalStackLayout>
+                </FlexLayout>
+
+                <BoxView class="HRule" />
+
+                <view:CurrentTempView
+                    IsVisible="{OnIdiom Phone=True, Default=False}"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

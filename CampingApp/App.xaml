@@ -1,0 +1,121 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CampingApp"
+             xmlns:pages="clr-namespace:CampingApp.Pages"
+             x:Class="CampingApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="Resources/Styles/Colors.xaml" />-->
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.MainPage>
+        <Shell
+            FlyoutBehavior="{OnIdiom Phone=Disabled, Default=Locked}"
+            FlyoutWidth="{OnIdiom Phone=72, Default=72}"
+            FlyoutBackgroundColor="{StaticResource Background_Mid}"
+            >
+
+            <Shell.BackButtonBehavior>
+                <BackButtonBehavior Command="{Binding BackCommand}"/>
+            </Shell.BackButtonBehavior>
+
+            <Shell.FlyoutFooterTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="68">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Grid.GestureRecognizers>
+                        <Image Source="settings.png"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               WidthRequest="40"
+                               HeightRequest="40"
+                               />
+                    </Grid>
+                </DataTemplate>
+            </Shell.FlyoutFooterTemplate>
+
+            <!-- Desktop/Tablet -->
+            <FlyoutItem Title="Home"
+                        Icon="home2.png"
+                        Route="home">
+                <ShellContent
+                    ContentTemplate="{DataTemplate pages:HomePage}" />
+            </FlyoutItem>
+
+            <FlyoutItem Title="Weather Radar"
+                        Icon="weather_icon.png"
+                        >
+                <ShellContent
+                    ContentTemplate="{DataTemplate pages:WeatherMapRadar}" />
+            </FlyoutItem>
+
+            <FlyoutItem Title="Step Counter"
+                        Icon="pedometer.png">
+                <ShellContent
+                    ContentTemplate="{DataTemplate pages:StepCounterPage}" />
+            </FlyoutItem>
+
+            <FlyoutItem Title="Compass"
+                        Icon="compass.png">
+                <ShellContent
+                    ContentTemplate="{DataTemplate pages:CompassPage}" />
+            </FlyoutItem>
+
+            <FlyoutItem Title="Notes"
+                        Icon="writing.png">
+                <ShellContent
+                    ContentTemplate="{DataTemplate pages:EmptyPage}" />
+            </FlyoutItem>
+
+            <FlyoutItem Title="Settings"
+                        FlyoutItemIsVisible="False">
+                <ShellContent
+                    ContentTemplate="{DataTemplate pages:EmptyPage}" />
+            </FlyoutItem>
+
+            <!-- Phone -->
+            <TabBar x:Name="PhoneTabs">
+                <Tab Title="Home" Icon="home2.png" NavigationPage.BackButtonTitle="true">
+                    <ShellContent Title="Home" ContentTemplate="{DataTemplate pages:HomePage}"/>
+                    <ShellContent Title="Guides" Route="pdf" ContentTemplate="{DataTemplate pages:PdfPage}"/>
+                </Tab>
+                <Tab Title="Weather" Icon="map.png" Route="radar">
+                    <ShellContent ContentTemplate="{DataTemplate pages:WeatherMapRadar}"/>
+                </Tab>
+                <Tab Title="Step Counter" Icon="footprints.png">
+                    <ShellContent ContentTemplate="{DataTemplate pages:StepCounterPage}"/>
+                </Tab>
+                <Tab Title="Compass" Icon="compass.svg">
+                    <ShellContent ContentTemplate="{DataTemplate pages:CompassPage}"/>
+                </Tab>
+                <Tab Title="Settings" Icon="settings.png">
+                    <ShellContent ContentTemplate="{DataTemplate pages:EmptyPage}"/>
+                </Tab>
+            </TabBar>
+
+
+
+            <Shell.ItemTemplate>
+                <DataTemplate>
+                    <Grid WidthRequest="44"
+                          HeightRequest="68"
+                          ColumnDefinitions="44" RowDefinitions="50">
+                        <Image Source="{Binding FlyoutIcon}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="38"
+                               WidthRequest="38"
+                               />
+                    </Grid>
+                </DataTemplate>
+
+            </Shell.ItemTemplate>
+        </Shell>
+    </Application.MainPage>
+</Application>
