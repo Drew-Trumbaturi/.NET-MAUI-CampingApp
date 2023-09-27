@@ -30,14 +30,13 @@ class NewPage1 : INotifyPropertyChanged {
 	/// </summary>
 	public NewPage1() {
 		//Accessing the PDF document that is added as embedded resource as stream.
-		SetPdfDocumentStream("https://collapsesurvivalsite.com/wp-content/uploads/2022/09/Mylar_Bag_Sealing_Methods.pdf");
 	}
 
 	/// <summary>
 	/// Gets and sets the document stream from the given URL. 
 	/// </summary>
 	/// <param name="URL">Document URL</param>
-	private async void SetPdfDocumentStream(string URL) {
+	public async void SetPdfDocumentStream(string URL) {
 		HttpClient httpClient = new HttpClient();
 		HttpResponseMessage response = await httpClient.GetAsync(URL);
 

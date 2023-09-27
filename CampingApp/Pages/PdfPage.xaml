@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-               x:Class="CampingApp.Pages.PdfPage">
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+             xmlns:local="clr-namespace:CampingApp.ViewModel"
+             x:Class="CampingApp.Pages.PdfPage">
 
-    <Grid>
-        <WebView Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="Fill" Source="WoodBurning.pdf" />
-    </Grid>
-</toolkit:Popup>
+    <ContentPage.BindingContext>
+        <local:NewPage1 x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <WebView x:Name="PdfWebView" Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="Fill" Navigating="PdfWebView_Navigating"/>
+
+    <ContentPage.Content>
+        <syncfusion:SfPdfViewer x:Name="PdfViewer"
+                                DocumentSource="{Binding PdfDocumentStream}">
+        </syncfusion:SfPdfViewer>
+    </ContentPage.Content>
+</ContentPage>
